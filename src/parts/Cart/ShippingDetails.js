@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function ShippingDetails() {
   return (
     <div class="w-full md:px-4 md:w-4/12" id="shipping-detail">
@@ -159,13 +159,20 @@ export default function ShippingDetails() {
             </div>
           </div>
           <div class="text-center">
-            <button
+            {/* <button
               type="submit"
-              disabled
+              // disabled
               class="bg-pink-400 text-black hover:bg-black hover:text-pink-400 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-6"
             >
               Checkout Now
-            </button>
+            </button> */}
+
+            <Link
+              to="../success"
+              class="bg-pink-400 text-black hover:bg-black hover:text-pink-400 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-6"
+            >
+              Checkout Now
+            </Link>
           </div>
         </form>
       </div>

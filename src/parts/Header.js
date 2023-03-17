@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Header({ theme, position }) {
   return (
-    <header className={[position, "z-50 w-full px-4"].join(" ")}>
+    <header className={[position, "z-20 w-full px-4"].join(" ")}>
       <div className="container py-5 mx-auto">
         <div className="flex items-center flex-stretch">
           <div className="flex items-center w-56">
