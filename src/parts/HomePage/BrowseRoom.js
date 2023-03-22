@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import UseAsync from "helpers/hooks/UseAsync";
+import fetch from "helpers/fetch";
 
 export default function BrowseRoom() {
+  const { data, status, error, run, isLoading } = UseAsync({
+    data: { username: "" },
+  });
+
+  useEffect(() => {
+    run(fetch({ url: "/api/products/?page=1&limit=10" }));
+  }, [run]);
+  console.log(data, status, error);
+
+  if (isLoading) return "Loading";
+
   return (
     <section className="flex px-4 py-16 bg-gray-100" id="browse-the-room">
       <div className="container mx-auto">
